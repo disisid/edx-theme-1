@@ -11,7 +11,8 @@ import re
 from urllib import quote_plus
 %>
 
-% if settings.XITI_ENABLED:
+% if getattr(settings, "XITI_ENABLED", "true"):
+
 <!-- Xiti -->
 <script type="text/javascript">
   <!--
